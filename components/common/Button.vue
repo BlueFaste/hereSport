@@ -8,7 +8,10 @@
 export default {
   name: "Button",
   props: {
-    text: String,
+    text: {
+      type: String,
+      default: "Send",
+    },
     background: {
       type: String,
       default: "bg-gray-400",
@@ -20,6 +23,10 @@ export default {
     with: {
       type: String,
       default: "w-full",
+    },
+    heigth: {
+      type: String,
+      default: "h-full",
     },
     margin: {
       type: String,
@@ -41,9 +48,12 @@ export default {
       ${this.background}
       hover:${this.background_hover}
       ${this.with}
+      ${this.heigth}
       ${this.margin}
       ${this.padding}
-      ${this.rounded ? this.rounded : ""}`;
+      ${this.rounded ? this.rounded : ""}
+
+      `;
     },
   },
 };
