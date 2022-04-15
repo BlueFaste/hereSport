@@ -1,6 +1,8 @@
 <template>
   <div
-    :class="`flex ${event.type == 'Match' ? 'bg-orange-100':'bg-gray-200'} w-2/6 rounded-lg h-52 items-center my-12 mx-24 relative`"
+    :class="`flex ${
+      event.type == 'Match' ? 'bg-orange-100' : 'bg-gray-200'
+    } rounded-lg h-52 items-center my-12 mx-24 relative`"
   >
     <img
       class="w-44 h-44 object-cover rounded-lg absolute -left-14"
@@ -8,9 +10,9 @@
     />
     <div class="pl-32 h-full flex flex-col justify-between py-5 w-full">
       <div>
-        <p>{{ event.type}}</p>
+        <p>{{ event.type }}</p>
         <h2 class="text-2xl">{{ formatDate(event.date) }}</h2>
-        <p class="text-xl">{{ event.hour}}</p>
+        <p class="text-xl">{{ event.hour }}</p>
         <p>{{ event.place }}</p>
       </div>
       <div>
