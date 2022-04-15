@@ -7,7 +7,7 @@
         <div class="w-3/5">
           <ul class="flex justify-center items-center">
             <li
-              class="px-3 border-2 border-transparent"
+              class="px-3 border-2 border-transparent hover:bg-gray-100 cursor-pointer"
               v-for="equipe in equipes"
               :key="`equipe-li-${equipe.id}`"
               :id="`equipe-li-${equipe.id}`"
@@ -31,7 +31,8 @@
               v-for="event in equipe.events"
               :event="event"
               :key="event.id"
-              class="w-3/5"
+              class="w-3/5 "
+              @updateCounter="updateCounter()"
             ></Event>
           </div>
         </div>
@@ -65,6 +66,11 @@ export default Vue.extend({
               date: "20220524",
               hour: "18:00",
               place: "21 rue Galieni, 49000 Angers",
+              counter :{
+                in : 0,
+                out: 0,
+                noResponse: 0,
+              }
             },
             {
               id: 2,
@@ -72,6 +78,11 @@ export default Vue.extend({
               date: "20220529",
               hour: "18:00",
               place: "21 rue Galieni, 49000 Angers",
+              counter :{
+                in : 0,
+                out: 0,
+                noResponse: 0,
+              }
             },
             {
               id: 3,
@@ -79,6 +90,11 @@ export default Vue.extend({
               date: "20220603",
               hour: "18:00",
               place: "21 rue Galieni, 49000 Angers",
+              counter :{
+                in : 0,
+                out: 0,
+                noResponse: 0,
+              }
             },
           ],
         },
@@ -129,6 +145,12 @@ export default Vue.extend({
         newActive.classList.add("equipe-active");
       }
     },
+
+    updateCounter(type: string){
+      console.log(type);
+
+
+    }
   },
 
   mounted() {
