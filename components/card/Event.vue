@@ -22,7 +22,7 @@
               :text="'In'"
               :background="'bg-green-400'"
               :background_hover="'bg-green-500'"
-              :with="'w-16'"
+              :with="'w-20'"
               :rounded="'rounded-md'"
             ></Button>
           </li>
@@ -31,7 +31,7 @@
               :text="'?'"
               :background="'bg-gray-300'"
               :background_hover="'bg-gray-400'"
-              :with="'w-16'"
+              :with="'w-20'"
               :rounded="'rounded-md'"
             ></Button>
           </li>
@@ -40,7 +40,7 @@
               :text="'Out'"
               :background="'bg-red-400'"
               :background_hover="'bg-red-500'"
-              :with="'w-16'"
+              :with="'w-20'"
               :rounded="'rounded-md'"
             ></Button>
           </li>
